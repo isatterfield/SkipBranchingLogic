@@ -1,0 +1,36 @@
+-- starting at entry-point
+select q.qkey, a.akey, q.akeyxref, q.Question, a.Answer from Questions q 
+left join Answers a on a.qkey = q.qkey
+where q.BranchMstrKey = '9f534b31-f454-4f8e-bc7c-9c80b5ef763d'
+and q.qkey = 'e6461b2b-c9c2-4937-8cb5-06e7a348f3a6'
+and a.qkey is not null
+
+--enter context driven q&a
+select q.qkey, a.akey, q.akeyxref, q.Question, a.Answer from Questions q 
+left join Answers a on a.qkey = q.qkey
+where q.akeyxref = '7ac8ed5a-575b-46a6-b310-145a6a541796'
+and q.BranchMstrKey = '9f534b31-f454-4f8e-bc7c-9c80b5ef763d'
+and a.qkey is not null
+
+
+--how will I know there are no more questions forth-coming??????
+select q.qkey, a.akey, q.Question, a.Answer, q.akeyxref from Questions q 
+left join Answers a on a.qkey = q.qkey
+where q.akeyxref = '31EC987D-14A4-465A-8826-50512AC619C6'
+and q.BranchMstrKey = '9f534b31-f454-4f8e-bc7c-9c80b5ef763d'
+and a.qkey is not null
+
+select q.qkey, a.akey, q.Question, a.Answer, q.akeyxref from Questions q 
+left join Answers a on a.qkey = q.qkey
+-- what's my next question based on the current answer? use the answer/selection to get the question from akeyxref, limit results with branch so that questions can later be re-used in other configurations
+where q.akeyxref = '21527E1F-1EE3-42F3-A032-F680D14951C7'
+and q.BranchMstrKey = '9f534b31-f454-4f8e-bc7c-9c80b5ef763d'
+and a.qkey is not null
+
+select q.qkey, a.akey, q.Question, a.Answer, q.akeyxref from Questions q 
+left join Answers a on a.qkey = q.qkey
+-- what's my next question based on the current answer? use the answer/selection to get the question from akeyxref, limit results with branch so that questions can later be re-used in other configurations
+where q.akeyxref = 'c53bada5-688a-4e0c-afdd-0e73dab2bf05'
+and q.BranchMstrKey = '9f534b31-f454-4f8e-bc7c-9c80b5ef763d'
+and a.qkey is not null
+
