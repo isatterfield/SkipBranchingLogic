@@ -1,0 +1,8 @@
+QKey,BranchMstrKey,QOrder,AKeyXref,Question,Details,StartDte,EndDte,Mandatory,Notes,author,created,userid,stamp
+{45CC7692-D84A-4B5F-A5A5-F4CE23FD048C},9f534b31-f454-4f8e-bc7c-9c80b5ef763d,,,What is your favorite felid?,Presents list for single selection of 36 possible choices,2019-04-10,2020-05-05,True,These notes are for internal use only.  This column will be presented to administrators.,irenesatterfield,2019-04-08 17:32:08.470000000,,
+{1DBB66A4-B6B4-4C71-85F0-464D77A4836E},9f534b31-f454-4f8e-bc7c-9c80b5ef763d,,7ac8ed5a-575b-46a6-b310-145a6a541796,Which is your favorite breed of cat?,,2019-04-10,2020-05-05,True,,irenesatterfield,2019-04-08 20:17:14.227000000,,
+{D9909C1E-80FB-415D-BAAB-FC17F892B158},9f534b31-f454-4f8e-bc7c-9c80b5ef763d,,31EC987D-14A4-465A-8826-50512AC619C6,Which is your favorite marking?,Color markings,2019-04-10,2020-05-05,True,,irenesatterfield,2019-04-08 20:22:29.997000000,,
+{E6461B2B-C9C2-4937-8CB5-06E7A348F3A6},9f534b31-f454-4f8e-bc7c-9c80b5ef763d,,,Which mammal do you prefer?,,2019-04-10,2020-05-05,True,,irenesatterfield,2019-04-08 20:29:29.500000000,,
+{9959BFBA-9FB2-4DDA-A36F-B32A74557726},9f534b31-f454-4f8e-bc7c-9c80b5ef763d,,,Which is your favorite breed of dog?,,2019-04-10,2020-05-05,True,,irenesatterfield,2019-04-08 20:32:07.367000000,,
+{5B9AF381-9041-4C4F-8EDD-37FB1B5F4568},9f534b31-f454-4f8e-bc7c-9c80b5ef763d,,,Which is your favorite breed of horse?,,2019-04-10,2020-05-05,True,,irenesatterfield,2019-04-08 20:32:23.897000000,,
+{9F42C405-F94C-46CB-9974-64A7A4518EF5},9f534b31-f454-4f8e-bc7c-9c80b5ef763d,,21527e1f-1ee3-42f3-a032-f680d14951c7,Which dollar range do you select?,,2019-04-10,2020-05-05,False,,irenesatterfield,2019-04-08 21:30:47.617000000,,
