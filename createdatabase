@@ -6,9 +6,7 @@ Note: author and stamp are the user to initially create the row and datetime it 
 
 
 
-
-
-/****** Object:  Table [dbo].[BranchMstr]    Script Date: 4/8/2019 4:58:16 PM ******/
+/****** Object:  Table [dbo].[BranchMstr]    Script Date: 4/8/2019 5:00:37 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -53,7 +51,8 @@ GO
 
 
 
-/****** Object:  Table [dbo].[Questions]    Script Date: 4/8/2019 4:59:01 PM ******/
+
+/****** Object:  Table [dbo].[Questions]    Script Date: 4/8/2019 5:01:06 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -103,8 +102,7 @@ EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Date time stam
 GO
 
 
-
-/****** Object:  Table [dbo].[Answers]    Script Date: 4/8/2019 4:59:22 PM ******/
+/****** Object:  Table [dbo].[Answers]    Script Date: 4/8/2019 5:01:24 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -143,6 +141,5 @@ GO
 
 EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'Presented as sub-text to each answer for the end-user. Optional.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Answers', @level2type=N'COLUMN',@level2name=N'Details'
 GO
-
 
 
