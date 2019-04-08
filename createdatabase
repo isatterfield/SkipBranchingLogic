@@ -1,8 +1,43 @@
 
+Note: the Description property of each column is provided for some columns when the column title is not entirely self-explanatory.  
+Note: default values are provided whenever possible.
+Note: editor and modified track the last modification made to the row, storing user name and datetime stamp respectively.
+Note: author and stamp are the user to initially create the row and datetime it occurred. It should never be modified after creation.
 
 
 
-/****** Object:  Table [dbo].[Questions]    Script Date: 4/8/2019 2:11:02 PM ******/
+
+
+/****** Object:  Table [dbo].[BranchMstr]    Script Date: 4/8/2019 2:16:37 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[BranchMstr](
+	[BranchMstrKey] [int] IDENTITY(1,3) NOT NULL,
+	[BranchGuid] [uniqueidentifier] NOT NULL,
+	[Description] [varchar](1000) NULL,
+	[author] [varchar](50) NULL,
+	[stamp] [datetime] NULL,
+	[editor] [varchar](50) NULL,
+	[modified] [datetime] NULL
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[BranchMstr] ADD  CONSTRAINT [DF_BranchMstr_BranchGuid]  DEFAULT (newid()) FOR [BranchGuid]
+GO
+
+ALTER TABLE [dbo].[BranchMstr] ADD  CONSTRAINT [DF_BranchMstr_stamp]  DEFAULT (getutcdate()) FOR [stamp]
+GO
+
+
+
+
+
+
+/****** Object:  Table [dbo].[Questions]    Script Date: 4/8/2019 2:21:33 PM ******/
 SET ANSI_NULLS ON
 GO
 
@@ -14,6 +49,7 @@ CREATE TABLE [dbo].[Questions](
 	[BranchMstrKey] [varchar](128) NULL,
 	[QOrder] [int] NULL,
 	[Question] [varchar](3000) NULL,
+	[Details] [varchar](500) NULL,
 	[StartDte] [date] NULL,
 	[EndDte] [date] NULL,
 	[Mandatory] [bit] NULL,
@@ -32,6 +68,12 @@ ALTER TABLE [dbo].[Questions] ADD  CONSTRAINT [DF_Questions_Mandatory]  DEFAULT 
 GO
 
 ALTER TABLE [dbo].[Questions] ADD  CONSTRAINT [DF_Questions_stamp]  DEFAULT (getutcdate()) FOR [stamp]
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'This field will be presented with the question; providing more explanation to the question.' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Questions', @level2type=N'COLUMN',@level2name=N'Details'
+GO
+
+EXEC sys.sp_addextendedproperty @name=N'MS_Description', @value=N'for internal use only. this column will never be displayed to survey-takers but only to administrators' , @level0type=N'SCHEMA',@level0name=N'dbo', @level1type=N'TABLE',@level1name=N'Questions', @level2type=N'COLUMN',@level2name=N'Notes'
 GO
 
 
