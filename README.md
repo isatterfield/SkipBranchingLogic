@@ -1,4 +1,4 @@
-# SurveyBranchingLogic
+# SkipBranchingLogic
 
 :::::::::::::::::::::::::::::::::::::::
 Complex Skip Logic (CSL) plus Branching
