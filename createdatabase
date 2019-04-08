@@ -1,0 +1,37 @@
+
+
+
+
+/****** Object:  Table [dbo].[Questions]    Script Date: 4/8/2019 2:11:02 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[Questions](
+	[QKey] [uniqueidentifier] NOT NULL,
+	[BranchMstrKey] [varchar](128) NULL,
+	[QOrder] [int] NULL,
+	[Question] [varchar](3000) NULL,
+	[StartDte] [date] NULL,
+	[EndDte] [date] NULL,
+	[Mandatory] [bit] NULL,
+	[Notes] [varchar](3000) NULL,
+	[author] [varchar](50) NULL,
+	[stamp] [datetime] NULL,
+	[editor] [varchar](50) NULL,
+	[modified] [datetime] NULL
+) ON [PRIMARY]
+GO
+
+ALTER TABLE [dbo].[Questions] ADD  CONSTRAINT [DF_Questions_QKey]  DEFAULT (newid()) FOR [QKey]
+GO
+
+ALTER TABLE [dbo].[Questions] ADD  CONSTRAINT [DF_Questions_Mandatory]  DEFAULT ((0)) FOR [Mandatory]
+GO
+
+ALTER TABLE [dbo].[Questions] ADD  CONSTRAINT [DF_Questions_stamp]  DEFAULT (getutcdate()) FOR [stamp]
+GO
+
+
